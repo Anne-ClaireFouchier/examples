@@ -7,6 +7,10 @@
 
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
+    <!-- Limits app visibility in the Google Play Store to ARCore supported devices
+     (https://developers.google.com/ar/devices). -->
+    <uses-feature android:name="android.hardware.camera.ar" />
+
 
     <application
         android:allowBackup="false"
@@ -15,6 +19,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.ObjectDetection">
+        <!-- "AR Required" app, requires "Google Play Services for AR" (ARCore)
+         to be installed, as the app does not include any non-AR features. -->
+        <meta-data android:name="com.google.ar.core" android:value="required" />
 
         <activity
             android:name=".DetectorActivity"

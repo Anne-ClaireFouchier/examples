@@ -5,7 +5,7 @@ android {
     buildToolsVersion "28.0.3"
 
     defaultConfig {
-        minSdkVersion 21
+        minSdkVersion 24
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
@@ -44,4 +44,5 @@ dependencies {
     // Build off of nightly TensorFlow Lite
     implementation 'org.tensorflow:tensorflow-lite:0.0.0-nightly-SNAPSHOT'
     implementation 'org.tensorflow:tensorflow-lite-metadata:0.0.0-nightly-SNAPSHOT'
+    implementation 'com.google.ar:core:1.24.0'
  }
